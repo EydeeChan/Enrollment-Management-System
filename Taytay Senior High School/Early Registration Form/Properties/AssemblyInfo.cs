@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Early Registration Form")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Created by: Kenneth Glenn Somera Bamba")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EydeeChan Software Solution")]
 [assembly: AssemblyProduct("Early Registration Form")]
 [assembly: AssemblyCopyright("Copyright EydeeChan Software Solution ©  2020")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("EydeeChan")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible

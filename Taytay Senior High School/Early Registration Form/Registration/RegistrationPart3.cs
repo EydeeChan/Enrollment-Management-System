@@ -34,5 +34,18 @@ namespace Early_Registration_Form.Registration
         }
 
         #endregion Instance
+        #region Preview Button
+        private void BtnPreview_Click(object sender, EventArgs e)
+        {
+            FrmReport a = new FrmReport();
+            a.Show();
+        }
+        #endregion
+        #region Submit Button
+        private void BtnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }

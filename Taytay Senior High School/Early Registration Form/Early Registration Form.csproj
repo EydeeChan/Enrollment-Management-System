@@ -163,6 +163,12 @@
       <DependentUpon>RegistrationPart3.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FrmRegistration.resx">
+      <DependentUpon>FrmRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -172,6 +178,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Registration\RegistrationPart1.resx">
+      <DependentUpon>RegistrationPart1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\RegistrationPart2.resx">
+      <DependentUpon>RegistrationPart2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\RegistrationPart3.resx">
+      <DependentUpon>RegistrationPart3.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

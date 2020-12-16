@@ -68,6 +68,7 @@ namespace Early_Registration_Form.Registration
             this.BtnPreview.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnPreview.Textcolor = System.Drawing.Color.White;
             this.BtnPreview.TextFont = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPreview.Click += new System.EventHandler(this.BtnPreview_Click);
             // 
             // BtnSubmit
             // 
@@ -103,6 +104,7 @@ namespace Early_Registration_Form.Registration
             this.BtnSubmit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnSubmit.Textcolor = System.Drawing.Color.White;
             this.BtnSubmit.TextFont = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // label13
             // 

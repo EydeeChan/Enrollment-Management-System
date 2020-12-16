@@ -34,6 +34,8 @@ namespace Early_Registration_Form
         #region Form Load
         private void FrmRegistration_Load(object sender, EventArgs e)
         {
+            string currentYear = DateTime.Now.ToString("yyyyMM");
+            RetrieveSchoolYear();
             #region Fade In
 
             Opacity = 0;      //first the opacity is 0
@@ -43,6 +45,19 @@ namespace Early_Registration_Form
             t1.Start();
 
             #endregion Fade In
+            lblenrollmentid.Text = "Enrollment ID: " + currentYear;
+            DateAndTime.Start();
+            Form = 1;
+            BtnBack.Visible = false;
+            //Add module1 to panel control
+            if (!panel4.Controls.Contains(Registration.RegistrationPart1.Instance))
+            {
+                panel4.Controls.Add(Registration.RegistrationPart1.Instance);
+                Registration.RegistrationPart1.Instance.Dock = DockStyle.Fill;
+                Registration.RegistrationPart1.Instance.BringToFront();
+            }
+            else
+                Registration.RegistrationPart1.Instance.BringToFront();
         }
         #endregion
         #region Fade In Event
