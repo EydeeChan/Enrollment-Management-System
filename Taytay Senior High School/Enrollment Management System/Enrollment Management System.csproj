@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{310BBEF6-4964-4672-858F-D3AC1D9135A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Enrollment_Management_System</RootNamespace>
+    <AssemblyName>Enrollment Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Core">
+      <HintPath>..\..\..\..\Desktop\Bunifu-UI-WinForms-1.11.5.1_ShareAppsCrack.com\Bunifu UI WinForms 1.11.5.1\Bunifu.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Desktop\Bunifu-UI-WinForms-1.11.5.1_ShareAppsCrack.com\Bunifu UI WinForms 1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.49.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.49.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.49.0.2160, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Drive.v3.1.49.0.2160\lib\net45\Google.Apis.Drive.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.49.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.49.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin Form\ClassList\Classlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\ClassList\Classlist.Designer.cs">
+      <DependentUpon>Classlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\ClassList\ClasslistReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\ClassList\ClasslistReport.Designer.cs">
+      <DependentUpon>ClasslistReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\EnrollmentHistory\EnrollmentHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\EnrollmentHistory\EnrollmentHistory.Designer.cs">
+      <DependentUpon>EnrollmentHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\EnrollmentHistory\EnrollmentHistoryReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\EnrollmentHistory\EnrollmentHistoryReport.Designer.cs">
+      <DependentUpon>EnrollmentHistoryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\Enrollment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\Enrollment.Designer.cs">
+      <DependentUpon>Enrollment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\EnrollmentModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\EnrollmentModule.Designer.cs">
+      <DependentUpon>EnrollmentModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\EnrollmentReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\EnrollmentReport.Designer.cs">
+      <DependentUpon>EnrollmentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\UserControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Enrollment\UserControl3.Designer.cs">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\RequirementChecklist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\RequirementChecklist.Designer.cs">
+      <DependentUpon>RequirementChecklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Scheduler\Scheduler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Scheduler\Scheduler.Designer.cs">
+      <DependentUpon>Scheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Scheduler\SchedulerReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Scheduler\SchedulerReport.Designer.cs">
+      <DependentUpon>SchedulerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Section.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Section.Designer.cs">
+      <DependentUpon>Section.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Settings\Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Settings\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\StaffMasterlist\StaffDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\StaffMasterlist\StaffDetails.Designer.cs">
+      <DependentUpon>StaffDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\StaffMasterlist\StaffMasterlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\StaffMasterlist\StaffMasterlist.Designer.cs">
+      <DependentUpon>StaffMasterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\StaffMasterlist\StaffMasterlistReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\StaffMasterlist\StaffMasterlistReport.Designer.cs">
+      <DependentUpon>StaffMasterlistReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\StudentMasterList\StudentDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\StudentMasterList\StudentDetails.Designer.cs">
+      <DependentUpon>StudentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\StudentMasterList\StudentMasterlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\StudentMasterList\StudentMasterlist.Designer.cs">
+      <DependentUpon>StudentMasterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\StudentMasterList\StudentMasterlistReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\StudentMasterList\StudentMasterlistReport.Designer.cs">
+      <DependentUpon>StudentMasterlistReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\Subjects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\Subjects.Designer.cs">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\TeacherMasterlist\TeacherDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\TeacherMasterlist\TeacherDetails.Designer.cs">
+      <DependentUpon>TeacherDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\TeacherMasterlist\TeacherMasterlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\TeacherMasterlist\TeacherMasterlist.Designer.cs">
+      <DependentUpon>TeacherMasterlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\TeacherMasterlist\TeacherMasterlistReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\TeacherMasterlist\TeacherMasterlistReport.Designer.cs">
+      <DependentUpon>TeacherMasterlistReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Form\TrackandStrand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin Form\TrackandStrand.Designer.cs">
+      <DependentUpon>TrackandStrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVar.cs" />
+    <Compile Include="Notification\NotificationAddedSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification\NotificationAddedSuccess.Designer.cs">
+      <DependentUpon>NotificationAddedSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification\NotificationConnectionError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification\NotificationConnectionError.Designer.cs">
+      <DependentUpon>NotificationConnectionError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification\NotificationConnectionSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification\NotificationConnectionSuccess.Designer.cs">
+      <DependentUpon>NotificationConnectionSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification\NotificationDeleteSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification\NotificationDeleteSuccess.Designer.cs">
+      <DependentUpon>NotificationDeleteSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification\NotificationEditSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification\NotificationEditSuccess.Designer.cs">
+      <DependentUpon>NotificationEditSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification\NotificationError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification\NotificationError.Designer.cs">
+      <DependentUpon>NotificationError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification\NotificationFillBlank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification\NotificationFillBlank.Designer.cs">
+      <DependentUpon>NotificationFillBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SHA256Hasher.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Admin Form\ClassList\Classlist.resx">
+      <DependentUpon>Classlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\ClassList\ClasslistReport.resx">
+      <DependentUpon>ClasslistReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\EnrollmentHistory\EnrollmentHistory.resx">
+      <DependentUpon>EnrollmentHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\EnrollmentHistory\EnrollmentHistoryReport.resx">
+      <DependentUpon>EnrollmentHistoryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Enrollment\Enrollment.resx">
+      <DependentUpon>Enrollment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Enrollment\EnrollmentModule.resx">
+      <DependentUpon>EnrollmentModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Enrollment\EnrollmentReport.resx">
+      <DependentUpon>EnrollmentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Enrollment\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Enrollment\UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Enrollment\UserControl3.resx">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\RequirementChecklist.resx">
+      <DependentUpon>RequirementChecklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Scheduler\Scheduler.resx">
+      <DependentUpon>Scheduler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Scheduler\SchedulerReport.resx">
+      <DependentUpon>SchedulerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Section.resx">
+      <DependentUpon>Section.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Settings\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\StaffMasterlist\StaffDetails.resx">
+      <DependentUpon>StaffDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\StaffMasterlist\StaffMasterlist.resx">
+      <DependentUpon>StaffMasterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\StaffMasterlist\StaffMasterlistReport.resx">
+      <DependentUpon>StaffMasterlistReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\StudentMasterList\StudentDetails.resx">
+      <DependentUpon>StudentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\StudentMasterList\StudentMasterlist.resx">
+      <DependentUpon>StudentMasterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\StudentMasterList\StudentMasterlistReport.resx">
+      <DependentUpon>StudentMasterlistReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\Subjects.resx">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\TeacherMasterlist\TeacherDetails.resx">
+      <DependentUpon>TeacherDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\TeacherMasterlist\TeacherMasterlist.resx">
+      <DependentUpon>TeacherMasterlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\TeacherMasterlist\TeacherMasterlistReport.resx">
+      <DependentUpon>TeacherMasterlistReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Form\TrackandStrand.resx">
+      <DependentUpon>TrackandStrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\NotificationAddedSuccess.resx">
+      <DependentUpon>NotificationAddedSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\NotificationConnectionError.resx">
+      <DependentUpon>NotificationConnectionError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\NotificationConnectionSuccess.resx">
+      <DependentUpon>NotificationConnectionSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\NotificationDeleteSuccess.resx">
+      <DependentUpon>NotificationDeleteSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\NotificationEditSuccess.resx">
+      <DependentUpon>NotificationEditSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\NotificationError.resx">
+      <DependentUpon>NotificationError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\NotificationFillBlank.resx">
+      <DependentUpon>NotificationFillBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
