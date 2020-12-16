@@ -22,6 +22,7 @@ namespace Enrollment_Management_System.Notification
         private void BtnOkay_Click(object sender, EventArgs e)
         {
             this.Hide();
+            GC.Collect();
         }
         #endregion
     }
