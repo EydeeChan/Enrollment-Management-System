@@ -50,9 +50,12 @@ namespace Early_Registration_Form
             this.BtnBack = new Bunifu.Framework.UI.BunifuFlatButton();
             this.BtnNext = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblconnected = new System.Windows.Forms.Label();
+            this.lblnotconnected = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.t1 = new System.Windows.Forms.Timer(this.components);
             this.DateAndTime = new System.Windows.Forms.Timer(this.components);
+            this.CheckCon = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimized)).BeginInit();
@@ -324,12 +327,36 @@ namespace Early_Registration_Form
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.lblconnected);
+            this.panel1.Controls.Add(this.lblnotconnected);
             this.panel1.Controls.Add(this.label25);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 639);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1234, 16);
             this.panel1.TabIndex = 302;
+            // 
+            // lblconnected
+            // 
+            this.lblconnected.AutoSize = true;
+            this.lblconnected.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblconnected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.lblconnected.Location = new System.Drawing.Point(-2, -2);
+            this.lblconnected.Name = "lblconnected";
+            this.lblconnected.Size = new System.Drawing.Size(107, 21);
+            this.lblconnected.TabIndex = 245;
+            this.lblconnected.Text = "Connected";
+            // 
+            // lblnotconnected
+            // 
+            this.lblnotconnected.AutoSize = true;
+            this.lblnotconnected.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnotconnected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.lblnotconnected.Location = new System.Drawing.Point(-2, -2);
+            this.lblnotconnected.Name = "lblnotconnected";
+            this.lblnotconnected.Size = new System.Drawing.Size(143, 21);
+            this.lblnotconnected.TabIndex = 244;
+            this.lblnotconnected.Text = "Not Connected";
             // 
             // label25
             // 
@@ -345,6 +372,11 @@ namespace Early_Registration_Form
             // DateAndTime
             // 
             this.DateAndTime.Tick += new System.EventHandler(this.DateAndTime_Tick);
+            // 
+            // CheckCon
+            // 
+            this.CheckCon.Interval = 5000;
+            this.CheckCon.Tick += new System.EventHandler(this.CheckCon_Tick);
             // 
             // FrmRegistration
             // 
@@ -401,5 +433,8 @@ namespace Early_Registration_Form
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer t1;
         private System.Windows.Forms.Timer DateAndTime;
+        private System.Windows.Forms.Label lblconnected;
+        private System.Windows.Forms.Label lblnotconnected;
+        private System.Windows.Forms.Timer CheckCon;
     }
 }

@@ -34,6 +34,7 @@ namespace Early_Registration_Form
         #region Form Load
         private void FrmRegistration_Load(object sender, EventArgs e)
         {
+            CheckCon.Start();
             string currentYear = DateTime.Now.ToString("yyyyMM");
             RetrieveSchoolYear();
             #region Fade In
@@ -176,6 +177,22 @@ namespace Early_Registration_Form
         private void BtnMinimized_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+        #endregion
+        #region Check Con Tick
+        private void CheckCon_Tick(object sender, EventArgs e)
+        {
+            if (con.State == ConnectionState.Open)
+            {
+                lblconnected.Visible = true;
+                lblnotconnected.Visible = false;
+                con.Close();
+            }
+            else
+            {
+                lblnotconnected.Visible = true;
+                lblconnected.Visible = false;
+            }
         }
         #endregion
     }
