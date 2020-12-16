@@ -29,17 +29,8 @@ namespace Enrollment_Management_System.Admin_Form.Enrollment
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Enrollment
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Name = "Enrollment";
-            this.Size = new System.Drawing.Size(1087, 707);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

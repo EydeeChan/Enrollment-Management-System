@@ -1,7 +1,7 @@
 ﻿
-namespace Enrollment_Management_System.Admin_Form.Enrollment
+namespace Early_Registration_Form.Registration
 {
-    partial class EnrollmentReport
+    partial class RegistrationPart3
     {
         /// <summary> 
         /// Required designer variable.

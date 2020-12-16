@@ -197,23 +197,11 @@
     <Compile Include="Admin Form\Enrollment\EnrollmentReport.Designer.cs">
       <DependentUpon>EnrollmentReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin Form\Enrollment\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin Form\Enrollment\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin Form\Enrollment\UserControl2.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Admin Form\Enrollment\UserControl2.Designer.cs">
       <DependentUpon>UserControl2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin Form\Enrollment\UserControl3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin Form\Enrollment\UserControl3.Designer.cs">
-      <DependentUpon>UserControl3.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin Form\RequirementChecklist.cs">
       <SubType>UserControl</SubType>
@@ -386,23 +374,8 @@
     <EmbeddedResource Include="Admin Form\EnrollmentHistory\EnrollmentHistoryReport.resx">
       <DependentUpon>EnrollmentHistoryReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin Form\Enrollment\Enrollment.resx">
-      <DependentUpon>Enrollment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin Form\Enrollment\EnrollmentModule.resx">
-      <DependentUpon>EnrollmentModule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin Form\Enrollment\EnrollmentReport.resx">
-      <DependentUpon>EnrollmentReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin Form\Enrollment\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin Form\Enrollment\UserControl2.resx">
       <DependentUpon>UserControl2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin Form\Enrollment\UserControl3.resx">
-      <DependentUpon>UserControl3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin Form\RequirementChecklist.resx">
       <DependentUpon>RequirementChecklist.cs</DependentUpon>
