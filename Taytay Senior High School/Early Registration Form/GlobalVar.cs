@@ -33,8 +33,8 @@ namespace Early_Registration_Form
         public static String CellPhone = "";
         public static String Email = "";
         public static String Lvl = "";
-        public static String Sex = "";
         public static String Semester = "";
+        public static String Sex = "";
         public static String BirthDate = "";
         public static String HouseStreet = "";
         public static String Barangay = "";
@@ -50,9 +50,11 @@ namespace Early_Registration_Form
         public static String FatherFirstName = "";
         public static String FatherMiddleName = "";
         public static String FatherLastName = "";
+        public static String FatherExtensionName = "";
         public static String GuardianFirstName = "";
         public static String GuardianMiddleName = "";
         public static String GuardianLastName = "";
+        public static String GuardianExtensionName = "";
         public static String SchoolID = "";
         public static String SchoolName = "";
         public static String SchoolAddress = "";

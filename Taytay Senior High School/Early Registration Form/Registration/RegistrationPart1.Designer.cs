@@ -129,6 +129,7 @@ namespace Early_Registration_Form.Registration
             this.TxtZipCode.Size = new System.Drawing.Size(109, 23);
             this.TxtZipCode.TabIndex = 295;
             this.TxtZipCode.UseSystemPasswordChar = false;
+            this.TxtZipCode.TextChanged += new System.EventHandler(this.TxtZipCode_TextChanged);
             // 
             // TxtProvince
             // 
@@ -144,6 +145,7 @@ namespace Early_Registration_Form.Registration
             this.TxtProvince.Size = new System.Drawing.Size(230, 23);
             this.TxtProvince.TabIndex = 293;
             this.TxtProvince.UseSystemPasswordChar = false;
+            this.TxtProvince.TextChanged += new System.EventHandler(this.TxtProvince_TextChanged);
             // 
             // label17
             // 
@@ -170,6 +172,7 @@ namespace Early_Registration_Form.Registration
             this.TxtMunicipality.Size = new System.Drawing.Size(230, 23);
             this.TxtMunicipality.TabIndex = 291;
             this.TxtMunicipality.UseSystemPasswordChar = false;
+            this.TxtMunicipality.TextChanged += new System.EventHandler(this.TxtMunicipality_TextChanged);
             // 
             // TxtBarangay
             // 
@@ -185,6 +188,7 @@ namespace Early_Registration_Form.Registration
             this.TxtBarangay.Size = new System.Drawing.Size(230, 23);
             this.TxtBarangay.TabIndex = 290;
             this.TxtBarangay.UseSystemPasswordChar = false;
+            this.TxtBarangay.TextChanged += new System.EventHandler(this.TxtBarangay_TextChanged);
             // 
             // label18
             // 
@@ -222,6 +226,7 @@ namespace Early_Registration_Form.Registration
             this.TxtHouseStreet.Size = new System.Drawing.Size(230, 23);
             this.TxtHouseStreet.TabIndex = 287;
             this.TxtHouseStreet.UseSystemPasswordChar = false;
+            this.TxtHouseStreet.TextChanged += new System.EventHandler(this.TxtHouseStreet_TextAlignChanged);
             // 
             // label20
             // 
@@ -290,6 +295,7 @@ namespace Early_Registration_Form.Registration
             this.TxtExtensionName.Size = new System.Drawing.Size(57, 23);
             this.TxtExtensionName.TabIndex = 294;
             this.TxtExtensionName.UseSystemPasswordChar = false;
+            this.TxtExtensionName.TextChanged += new System.EventHandler(this.TxtExtensionName_TextChanged);
             // 
             // label10
             // 
@@ -314,6 +320,7 @@ namespace Early_Registration_Form.Registration
             this.CmbSex.Size = new System.Drawing.Size(131, 29);
             this.CmbSex.TabIndex = 292;
             this.CmbSex.UseSelectable = true;
+            this.CmbSex.SelectedIndexChanged += new System.EventHandler(this.CmbSex_SelectedIndexChanged);
             // 
             // TxtMiddleName
             // 
@@ -329,6 +336,7 @@ namespace Early_Registration_Form.Registration
             this.TxtMiddleName.Size = new System.Drawing.Size(267, 23);
             this.TxtMiddleName.TabIndex = 291;
             this.TxtMiddleName.UseSystemPasswordChar = false;
+            this.TxtMiddleName.TextChanged += new System.EventHandler(this.TxtMiddleName_TextChanged);
             // 
             // TxtFirstName
             // 
@@ -344,6 +352,7 @@ namespace Early_Registration_Form.Registration
             this.TxtFirstName.Size = new System.Drawing.Size(267, 23);
             this.TxtFirstName.TabIndex = 290;
             this.TxtFirstName.UseSystemPasswordChar = false;
+            this.TxtFirstName.TextChanged += new System.EventHandler(this.TxtFirstName_TextChanged);
             // 
             // label7
             // 
@@ -381,6 +390,7 @@ namespace Early_Registration_Form.Registration
             this.TxtLastName.Size = new System.Drawing.Size(267, 23);
             this.TxtLastName.TabIndex = 287;
             this.TxtLastName.UseSystemPasswordChar = false;
+            this.TxtLastName.TextChanged += new System.EventHandler(this.TxtLastName_TextAlignChanged);
             // 
             // label11
             // 
@@ -421,6 +431,7 @@ namespace Early_Registration_Form.Registration
             this.TxtBirthPlace.Size = new System.Drawing.Size(463, 23);
             this.TxtBirthPlace.TabIndex = 291;
             this.TxtBirthPlace.UseSystemPasswordChar = false;
+            this.TxtBirthPlace.TextChanged += new System.EventHandler(this.TxtBirthPlace_TextChanged);
             // 
             // label22
             // 
@@ -446,6 +457,7 @@ namespace Early_Registration_Form.Registration
             this.TxtBirthdate.Size = new System.Drawing.Size(463, 36);
             this.TxtBirthdate.TabIndex = 0;
             this.TxtBirthdate.Value = new System.DateTime(2020, 2, 22, 0, 0, 0, 0);
+            this.TxtBirthdate.onValueChanged += new System.EventHandler(this.TxtBirthdate_onValueChanged);
             // 
             // groupBox6
             // 
@@ -480,6 +492,7 @@ namespace Early_Registration_Form.Registration
             this.RadioBalikAral.TabStop = true;
             this.RadioBalikAral.Text = "Returning (Balik-Aral)";
             this.RadioBalikAral.UseVisualStyleBackColor = true;
+            this.RadioBalikAral.CheckedChanged += new System.EventHandler(this.RadioBalikAral_CheckedChanged);
             // 
             // RadioWithLRN
             // 
@@ -497,6 +510,7 @@ namespace Early_Registration_Form.Registration
             this.RadioWithLRN.TabStop = true;
             this.RadioWithLRN.Text = "With LRN";
             this.RadioWithLRN.UseVisualStyleBackColor = true;
+            this.RadioWithLRN.CheckedChanged += new System.EventHandler(this.RadioWithLRN_CheckedChanged);
             // 
             // RadioNoLRN
             // 
@@ -514,6 +528,7 @@ namespace Early_Registration_Form.Registration
             this.RadioNoLRN.TabStop = true;
             this.RadioNoLRN.Text = "No LRN";
             this.RadioNoLRN.UseVisualStyleBackColor = true;
+            this.RadioNoLRN.CheckedChanged += new System.EventHandler(this.RadioNoLRN_CheckedChanged);
             // 
             // TxtLRN
             // 
@@ -529,6 +544,7 @@ namespace Early_Registration_Form.Registration
             this.TxtLRN.Size = new System.Drawing.Size(267, 23);
             this.TxtLRN.TabIndex = 294;
             this.TxtLRN.UseSystemPasswordChar = false;
+            this.TxtLRN.Click += new System.EventHandler(this.TxtLRN_TextChanged);
             // 
             // label3
             // 
@@ -555,6 +571,7 @@ namespace Early_Registration_Form.Registration
             this.TxtPSA.Size = new System.Drawing.Size(267, 23);
             this.TxtPSA.TabIndex = 292;
             this.TxtPSA.UseSystemPasswordChar = false;
+            this.TxtPSA.Click += new System.EventHandler(this.TxtPSA_TextChanged);
             // 
             // label4
             // 
@@ -597,6 +614,7 @@ namespace Early_Registration_Form.Registration
             this.TxtReligion.Size = new System.Drawing.Size(554, 23);
             this.TxtReligion.TabIndex = 297;
             this.TxtReligion.UseSystemPasswordChar = false;
+            this.TxtReligion.TextChanged += new System.EventHandler(this.TxtReligion_TextChanged);
             // 
             // label28
             // 
@@ -623,6 +641,7 @@ namespace Early_Registration_Form.Registration
             this.TxtEtnicGroup.Size = new System.Drawing.Size(554, 23);
             this.TxtEtnicGroup.TabIndex = 295;
             this.TxtEtnicGroup.UseSystemPasswordChar = false;
+            this.TxtEtnicGroup.TextChanged += new System.EventHandler(this.TxtEtnicGroup_TextChanged);
             // 
             // label27
             // 
@@ -649,6 +668,7 @@ namespace Early_Registration_Form.Registration
             this.TxtMotherTounge.Size = new System.Drawing.Size(554, 23);
             this.TxtMotherTounge.TabIndex = 293;
             this.TxtMotherTounge.UseSystemPasswordChar = false;
+            this.TxtMotherTounge.TextChanged += new System.EventHandler(this.TxtMotherTounge_TextChanged);
             // 
             // label26
             // 
@@ -700,6 +720,7 @@ namespace Early_Registration_Form.Registration
             this.TxtMobile.Size = new System.Drawing.Size(213, 23);
             this.TxtMobile.TabIndex = 289;
             this.TxtMobile.UseSystemPasswordChar = false;
+            this.TxtMobile.TextChanged += new System.EventHandler(this.TxtMobile_TextChanged);
             // 
             // label23
             // 
@@ -726,6 +747,7 @@ namespace Early_Registration_Form.Registration
             this.TxtEmail.Size = new System.Drawing.Size(213, 23);
             this.TxtEmail.TabIndex = 287;
             this.TxtEmail.UseSystemPasswordChar = false;
+            this.TxtEmail.TextChanged += new System.EventHandler(this.TxtEmail_TextChanged);
             // 
             // RegistrationPart1
             // 
@@ -740,6 +762,7 @@ namespace Early_Registration_Form.Registration
             this.Controls.Add(this.groupBox3);
             this.Name = "RegistrationPart1";
             this.Size = new System.Drawing.Size(1234, 498);
+            this.Load += new System.EventHandler(this.RegistrationPart1_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

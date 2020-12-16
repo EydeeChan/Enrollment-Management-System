@@ -124,7 +124,6 @@ namespace Early_Registration_Form.Registration
         }
         #endregion
         #region Form Load
-
         private void RegistrationPart2_Load(object sender, EventArgs e)
         {
             TxtMotherFirstName.Text = GlobalVar.MotherFirstName;
@@ -133,17 +132,52 @@ namespace Early_Registration_Form.Registration
             TxtFatherFirstName.Text = GlobalVar.FatherFirstName;
             TxtFatherMiddleName.Text = GlobalVar.FatherMiddleName;
             TxtFatherLastName.Text = GlobalVar.FatherLastName;
+            TxtExtensionName.Text = GlobalVar.FatherExtensionName;
             TxtGuardianFirstName.Text = GlobalVar.GuardianFirstName;
             TxtGuardianMiddleName.Text = GlobalVar.GuardianMiddleName;
             TxtGuardianLastName.Text = GlobalVar.GuardianLastName;
+            TxtGuardianExtension.Text = GlobalVar.GuardianExtensionName;
             TxtSchoolID.Text = GlobalVar.SchoolID;
             TxtSchoolName.Text = GlobalVar.SchoolName;
             CmbLvl.Text = GlobalVar.Lvl;
+            CmbStrand.Text = GlobalVar.Strand;
+            CmbTrack.Text = GlobalVar.Track;
+            CmbSemester.Text = GlobalVar.Semester;
             TxtSchoolAddress.Text = GlobalVar.SchoolAddress;
             TxtLastGrade.Text = GlobalVar.LastGrade;
             TxtLastSchoolYear.Text = GlobalVar.LastSchoolYear;
         }
 
-        #endregion Form Load
+        #endregion 
+        #region TxtFatherExtensionName Text Changed
+        private void TxtExtensionName_TextChanged(object sender, EventArgs e)
+        {
+            GlobalVar.FatherExtensionName = TxtExtensionName.Text;
+        }
+        #endregion
+        #region TxtGuardianExtensionName Text Changed
+        private void TxtGuardianExtension_TextChanged(object sender, EventArgs e)
+        {
+            GlobalVar.GuardianExtensionName = TxtGuardianExtension.Text;
+        }
+        #endregion
+        #region CmbSemester Selected Index Changed
+        private void CmbSemester_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GlobalVar.Semester = CmbSemester.Text;
+        }
+        #endregion
+        #region CmbTrack Selected Index Changed
+        private void CmbTrack_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GlobalVar.Track = CmbTrack.Text;
+        }
+        #endregion
+        #region CmbStrand Selected Index Changed
+        private void CmbStrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GlobalVar.Strand = CmbStrand.Text;
+        }
+        #endregion
     }
 }
