@@ -16,6 +16,7 @@ namespace Early_Registration_Form
         public static String DatabasePassword = "";
         public static String DatabasePort = "";
 
+        public static String EnrollmentStatus = "";
         public static String EnrollmentID = "";
         public static String BirthYear = "";
         public static String Date = "";
