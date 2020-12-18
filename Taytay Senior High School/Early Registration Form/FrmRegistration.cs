@@ -34,6 +34,7 @@ namespace Early_Registration_Form
         #region Form Load
         private void FrmRegistration_Load(object sender, EventArgs e)
         {
+            CheckStatus.Start();
             CheckCon.Start();
             string currentYear = DateTime.Now.ToString("yyyyMM");
             RetrieveSchoolYear();
@@ -50,12 +51,13 @@ namespace Early_Registration_Form
             DateAndTime.Start();
             Form = 1;
             BtnBack.Visible = false;
+            BtnNext.Visible = false;
             //Add module1 to panel control
-            if (!panel4.Controls.Contains(Registration.RegistrationPart1.Instance))
+            if (!panel4.Controls.Contains(Registration.RegistrationStart.Instance))
             {
-                panel4.Controls.Add(Registration.RegistrationPart1.Instance);
-                Registration.RegistrationPart1.Instance.Dock = DockStyle.Fill;
-                Registration.RegistrationPart1.Instance.BringToFront();
+                panel4.Controls.Add(Registration.RegistrationStart.Instance);
+                Registration.RegistrationStart.Instance.Dock = DockStyle.Fill;
+                Registration.RegistrationStart.Instance.BringToFront();
             }
             else
                 Registration.RegistrationPart1.Instance.BringToFront();
@@ -75,33 +77,70 @@ namespace Early_Registration_Form
         #region Next Button
         private void BtnNext_Click(object sender, EventArgs e)
         {
+            CheckStatus.Stop();
             Form++;
             BtnBack.Visible = true;
             if (Form == 2)
             {
                 //Add module2 to panel control
+                if (!panel4.Controls.Contains(Registration.RegistrationPart1.Instance))
+                {
+                    panel4.Controls.Add(Registration.RegistrationPart1.Instance);
+                    Registration.RegistrationPart1.Instance.Dock = DockStyle.Fill;
+                    Registration.RegistrationPart1.Instance.BringToFront();
+                }
+                else
+                    Registration.RegistrationPart1.Instance.BringToFront();
+            }
+            else if (Form == 3)
+            {
+                //Add module3 to panel control
                 if (!panel4.Controls.Contains(Registration.RegistrationPart2.Instance))
                 {
                     panel4.Controls.Add(Registration.RegistrationPart2.Instance);
                     Registration.RegistrationPart2.Instance.Dock = DockStyle.Fill;
                     Registration.RegistrationPart2.Instance.BringToFront();
-                    panel4.Controls.Clear();
                 }
                 else
                     Registration.RegistrationPart2.Instance.BringToFront();
             }
-            else if (Form == 3)
+            else if (Form == 4)
             {
-                BtnNext.Visible = false;
-                //Add module3 to panel control
-                if (!panel4.Controls.Contains(Registration.RegistrationPart3.Instance))
+                if (GlobalVar.EnrollmentStatus.Equals("Transferee"))
                 {
-                    panel4.Controls.Add(Registration.RegistrationPart3.Instance);
-                    Registration.RegistrationPart3.Instance.Dock = DockStyle.Fill;
-                    Registration.RegistrationPart3.Instance.BringToFront();
+                    if (!panel4.Controls.Contains(Registration.RegistrationPart3.Instance))
+                    {
+                        panel4.Controls.Add(Registration.RegistrationPart3.Instance);
+                        Registration.RegistrationPart3.Instance.Dock = DockStyle.Fill;
+                        Registration.RegistrationPart3.Instance.BringToFront();
+                    }
+                    else
+                        Registration.RegistrationPart3.Instance.BringToFront();
                 }
                 else
-                    Registration.RegistrationPart3.Instance.BringToFront();
+                {
+                    BtnNext.Visible = false;
+                    if (!panel4.Controls.Contains(Registration.RegistrationPart3.Instance))
+                    {
+                        panel4.Controls.Add(Registration.RegistrationPart3.Instance);
+                        Registration.RegistrationPart3.Instance.Dock = DockStyle.Fill;
+                        Registration.RegistrationPart3.Instance.BringToFront();
+                    }
+                    else
+                        Registration.RegistrationPart3.Instance.BringToFront();
+                }
+            }
+            else if (Form == 5)
+            {
+                //Add module3 to panel control
+                if (!panel4.Controls.Contains(Prospectus.Prospectus.Instance))
+                {
+                    panel4.Controls.Add(Prospectus.Prospectus.Instance);
+                    Prospectus.Prospectus.Instance.Dock = DockStyle.Fill;
+                    Prospectus.Prospectus.Instance.BringToFront();
+                }
+                else
+                    Prospectus.Prospectus.Instance.BringToFront();
             }
         }
         #endregion
@@ -114,6 +153,18 @@ namespace Early_Registration_Form
             {
                 BtnBack.Visible = false;
                 //Add module2 to panel control
+                if (!panel4.Controls.Contains(Registration.RegistrationStart.Instance))
+                {
+                    panel4.Controls.Add(Registration.RegistrationStart.Instance);
+                    Registration.RegistrationStart.Instance.Dock = DockStyle.Fill;
+                    Registration.RegistrationStart.Instance.BringToFront();
+                }
+                else
+                    Registration.RegistrationStart.Instance.BringToFront();
+            }
+            else if (Form == 2)
+            {
+                //Add module3 to panel control
                 if (!panel4.Controls.Contains(Registration.RegistrationPart1.Instance))
                 {
                     panel4.Controls.Add(Registration.RegistrationPart1.Instance);
@@ -123,7 +174,7 @@ namespace Early_Registration_Form
                 else
                     Registration.RegistrationPart1.Instance.BringToFront();
             }
-            else if (Form == 2)
+            else if (Form == 3)
             {
                 //Add module3 to panel control
                 if (!panel4.Controls.Contains(Registration.RegistrationPart2.Instance))
@@ -134,6 +185,18 @@ namespace Early_Registration_Form
                 }
                 else
                     Registration.RegistrationPart2.Instance.BringToFront();
+            }
+            else if (Form == 4)
+            {
+                //Add module3 to panel control
+                if (!panel4.Controls.Contains(Registration.RegistrationPart2.Instance))
+                {
+                    panel4.Controls.Add(Registration.RegistrationPart3.Instance);
+                    Registration.RegistrationPart3.Instance.Dock = DockStyle.Fill;
+                    Registration.RegistrationPart3.Instance.BringToFront();
+                }
+                else
+                    Registration.RegistrationPart3.Instance.BringToFront();
             }
         }
         #endregion
@@ -189,10 +252,24 @@ namespace Early_Registration_Form
                 con.Close();
             }
             else
-            {
                 lblnotconnected.Visible = true;
                 lblconnected.Visible = false;
+
+        }
+        #endregion
+        #region Check Status 
+        private void CheckStatus_Tick(object sender, EventArgs e)
+        {
+            if (GlobalVar.EnrollmentStatus.Equals("New Student"))
+            {
+                BtnNext.Visible = true;
             }
+            else if (GlobalVar.EnrollmentStatus.Equals("Transferee"))
+            {
+                BtnNext.Visible = true;
+            }
+            else
+                BtnNext.Visible = false;
         }
         #endregion
     }
