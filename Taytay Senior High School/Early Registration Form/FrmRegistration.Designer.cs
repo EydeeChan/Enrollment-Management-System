@@ -56,6 +56,7 @@ namespace Early_Registration_Form
             this.t1 = new System.Windows.Forms.Timer(this.components);
             this.DateAndTime = new System.Windows.Forms.Timer(this.components);
             this.CheckCon = new System.Windows.Forms.Timer(this.components);
+            this.CheckStatus = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMinimized)).BeginInit();
@@ -378,6 +379,10 @@ namespace Early_Registration_Form
             this.CheckCon.Interval = 5000;
             this.CheckCon.Tick += new System.EventHandler(this.CheckCon_Tick);
             // 
+            // CheckStatus
+            // 
+            this.CheckStatus.Tick += new System.EventHandler(this.CheckStatus_Tick);
+            // 
             // FrmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,7 +429,6 @@ namespace Early_Registration_Form
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuFlatButton BtnBack;
         private Bunifu.Framework.UI.BunifuFlatButton BtnNext;
@@ -436,5 +440,7 @@ namespace Early_Registration_Form
         private System.Windows.Forms.Label lblconnected;
         private System.Windows.Forms.Label lblnotconnected;
         private System.Windows.Forms.Timer CheckCon;
+        public System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Timer CheckStatus;
     }
 }
