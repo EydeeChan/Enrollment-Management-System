@@ -44,7 +44,7 @@
 
 ## For Early Registration Form
 1. Download the latest version **[here](https://github.com/EydeeChan/Enrollment-Management-System/releases)**.
-2. Extract the zip package and look for **"ERFemoSetup.exe"** file, it should be in root directory.
+2. Extract the zip package and look for **"ERFDemoSetup.exe"** file, it should be in root directory.
 3. Run your MySQL Server then import tshs_sms.sql and execute it.
 4. Enter the following Credentials.
 
