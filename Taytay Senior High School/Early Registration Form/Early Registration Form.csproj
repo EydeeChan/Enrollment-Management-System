@@ -150,6 +150,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prospectus\Prospectus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Prospectus\Prospectus.Designer.cs">
+      <DependentUpon>Prospectus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prospectus\ProspectusABM.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,6 +234,12 @@
     <Compile Include="Registration\RegistrationPart3.Designer.cs">
       <DependentUpon>RegistrationPart3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registration\RegistrationStart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Registration\RegistrationStart.Designer.cs">
+      <DependentUpon>RegistrationStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="FrmRegistration.resx">
       <DependentUpon>FrmRegistration.cs</DependentUpon>
@@ -247,6 +259,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Prospectus\Prospectus.resx">
+      <DependentUpon>Prospectus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registration\RegistrationPart1.resx">
       <DependentUpon>RegistrationPart1.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration\RegistrationPart3.resx">
       <DependentUpon>RegistrationPart3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\RegistrationStart.resx">
+      <DependentUpon>RegistrationStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Annex2.rdlc" />
     <None Include="packages.config" />
