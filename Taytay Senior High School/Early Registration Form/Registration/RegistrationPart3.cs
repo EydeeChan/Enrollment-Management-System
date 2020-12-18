@@ -47,5 +47,13 @@ namespace Early_Registration_Form.Registration
 
         }
         #endregion
+
+        private void RegistrationPart3_Load(object sender, EventArgs e)
+        {
+            if(GlobalVar.EnrollmentStatus.Equals("Transferee"))
+            {
+                BtnSubmit.Visible = false;
+            }
+        }
     }
 }

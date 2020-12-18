@@ -56,7 +56,7 @@ namespace Early_Registration_Form.Registration
             this.BtnPreview.IconVisible = true;
             this.BtnPreview.IconZoom = 90D;
             this.BtnPreview.IsTab = false;
-            this.BtnPreview.Location = new System.Drawing.Point(345, 303);
+            this.BtnPreview.Location = new System.Drawing.Point(296, 303);
             this.BtnPreview.Name = "BtnPreview";
             this.BtnPreview.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.BtnPreview.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(164)))), ((int)(((byte)(162)))));
@@ -92,7 +92,7 @@ namespace Early_Registration_Form.Registration
             this.BtnSubmit.IconVisible = true;
             this.BtnSubmit.IconZoom = 90D;
             this.BtnSubmit.IsTab = false;
-            this.BtnSubmit.Location = new System.Drawing.Point(683, 303);
+            this.BtnSubmit.Location = new System.Drawing.Point(634, 303);
             this.BtnSubmit.Name = "BtnSubmit";
             this.BtnSubmit.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.BtnSubmit.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(164)))), ((int)(((byte)(162)))));
@@ -111,7 +111,7 @@ namespace Early_Registration_Form.Registration
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DimGray;
-            this.label13.Location = new System.Drawing.Point(275, 76);
+            this.label13.Location = new System.Drawing.Point(226, 76);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(820, 178);
             this.label13.TabIndex = 319;
@@ -128,6 +128,7 @@ namespace Early_Registration_Form.Registration
             this.Controls.Add(this.label13);
             this.Name = "RegistrationPart3";
             this.Size = new System.Drawing.Size(1234, 498);
+            this.Load += new System.EventHandler(this.RegistrationPart3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
