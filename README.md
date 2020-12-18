@@ -26,16 +26,31 @@
 
 ## Installation
 
-### For Taytay Senior High School
+### Early Registration Form
 1. Download the latest version **[here](https://github.com/EydeeChan/Enrollment-Management-System/releases)**.
-2. Extract the zip package and look for **"Setup.exe"** file, it should be in root directory.
+2. Extract the zip package and look for **"ERFSetup.exe"** file, it should be in root directory.
+3. Open the program then go to database setting.
+4. Set the following database setting given by the administrator.
+5. Enter your credentials.
+
+### Enrollment Management System
+1. Download the latest version **[here](https://github.com/EydeeChan/Enrollment-Management-System/releases)**.
+2. Extract the zip package and look for **"EMSSetup.exe"** file, it should be in root directory.
 3. Open the program then go to database setting.
 4. Set the following database setting given by the administrator.
 5. Enter your credentials.
 
 ### Demo
+
+## For Early Registration Form
 1. Download the latest version **[here](https://github.com/EydeeChan/Enrollment-Management-System/releases)**.
-2. Extract the zip package and look for **"Setup.exe"** file, it should be in root directory.
+2. Extract the zip package and look for **"ERFemoSetup.exe"** file, it should be in root directory.
+3. Run your MySQL Server then import tshs_sms.sql and execute it.
+4. Enter the following Credentials.
+
+## For Enrollment Management System
+1. Download the latest version **[here](https://github.com/EydeeChan/Enrollment-Management-System/releases)**.
+2. Extract the zip package and look for **"EMSDemoSetup.exe"** file, it should be in root directory.
 3. Run your MySQL Server then import tshs_sms.sql and execute it.
 4. Enter the following Credentials.
 
