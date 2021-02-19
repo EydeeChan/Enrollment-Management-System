@@ -23,6 +23,9 @@
 ```
 3. SAP Report Tool
 ```
+```
+4. Crystal Report for Visual Studio 2019
+```
 
 ## Installation
 
@@ -54,8 +57,8 @@
 3. Run your MySQL Server then import tshs_sms.sql and execute it.
 4. Enter the following Credentials.
 
-* Username: Demo
-* Password: Demo
+
+* For demo you can also reach me thru my facebook account. **[here](https://facebook.com/EydeeChan)**.
 
 
 ## Built With
@@ -88,7 +91,10 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 
 ## Author and Developer
 
-* **Kenneth Glenn Somera Bamba** - *Initial work* - [EydeeChan](https://github.com/EydeeChan)
+* **Kenneth Glenn Somera Bamba** 
 
+## Social Media Account
+* **[Facebook](https://facebook.com/EydeeChan)
+* **Email Account - dev.eydeechan@gmail.com
 
 ## Update Notes
