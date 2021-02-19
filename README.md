@@ -94,7 +94,7 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 * **Kenneth Glenn Somera Bamba** 
 
 ## Social Media Account
-* **[Facebook](https://facebook.com/EydeeChan)
-* **Email Account - dev.eydeechan@gmail.com
+* **[Facebook](https://facebook.com/EydeeChan)**
+* **Email Account - dev.eydeechan@gmail.com**
 
 ## Update Notes
